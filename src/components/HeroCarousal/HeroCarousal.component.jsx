@@ -15,7 +15,7 @@ const HeroCarousal = () =>
          const getImages = await axios.get("/movie/now_playing");
          console.log(getImages);
          setImages(getImages.data.results);
-         console.log(getImages.data.results);
+        
        };
        requestNowPlayingMovies();
        
