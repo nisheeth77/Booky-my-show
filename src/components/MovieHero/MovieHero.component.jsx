@@ -1,10 +1,12 @@
-import React from 'react';
+import React , {useContext} from 'react';
+import {MovieContext} from "../../context/movie.context";
 import MovieInfo from './MovieInfo.component';
 
 const MovieHero = () => {
+  const { movie } = useContext(MovieContext);
   return (
     <>
-      <div>
+      <div >
         {/* {mobile} */}
         <div className="relative md:hidden w-full"
           style={{ height: "100vh" }}>
@@ -14,7 +16,7 @@ const MovieHero = () => {
             </div>
 
           <div className='w-full h-56 bg-opacity-50 absolute bg-black z-10 bottom-0' />
-          <img src="https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/zack-snyder-s-justice-league-et00047164-15-11-2021-07-48-20.jpg"
+          <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt=""
             className='w-full h-full' />
         </div>
@@ -27,7 +29,7 @@ const MovieHero = () => {
             <div className='absolute z-20 bottom-16 '>
               <MovieInfo />
             </div>
-          <img src="https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/zack-snyder-s-justice-league-et00047164-15-11-2021-07-48-20.jpg"
+          <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt=""
             className='w-full h-full' />
         </div>
@@ -47,7 +49,7 @@ const MovieHero = () => {
             <div className=' w-66  '
              style={{height:"27rem"}}
              >
-              <img src="https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/spider-man-no-way-home-et00310790-10-02-2022-11-40-29.jpg"
+              <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                alt=""
                className='w-full h-full rounded-xl' />
             </div>
@@ -55,7 +57,7 @@ const MovieHero = () => {
               <MovieInfo />
             </div>
             </div>
-          <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/spider-man-no-way-home-et00310790-10-02-2022-11-40-29.jpg"
+          <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
             alt=""
             className='w-full h-full' />
         </div>

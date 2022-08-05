@@ -13,24 +13,34 @@ const HomePage = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
+  // const [latestmovies,setlatestmovies] = useState([]);
 
   useEffect(() => {
     const requestPopularMovies = async () => {
-      const getPopularMovies = await axios.get("/movie/popular");
+      const getPopularMovies = await axios.get("/movie/now_playing");
+      console.log(getPopularMovies)
       setPopularMovies(getPopularMovies.data.results);
     };
 
     requestPopularMovies();
   }, []);
 
-  useEffect(() => {
-    const requestTopRatedMovies = async () => {
-      const getTopRatedMovies = await axios.get("/movie/top_rated");
-      setTopRatedMovies(getTopRatedMovies.data.results);
-    };
+// useEffect(() => {
+//   const requestlatestmovies = async () => {
+//     const getlatestmovies = await axios.get("/movie/latest");
+//     console.log(getlatestmovies);
+//   };
+//   requestlatestmovies();
+// }, [] );
 
-    requestTopRatedMovies();
-  }, []);
+useEffect(() => {
+  const requestTopRatedMovies = async () => {
+    const getTopRatedMovies = await axios.get("/movie/top_rated");
+    setTopRatedMovies(getTopRatedMovies.data.results);
+  };
+
+  requestTopRatedMovies();
+}, []);
 
   useEffect(() => {
     const requestUpcomingMovies = async () => {
