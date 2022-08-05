@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import EntertainmentCardSlider from "../components/Entertaiment/Enetrtainmentcard.component";
 
 
-import Premiereimages from "../components/config/PremiereImages.config";
+
 
 import  PosterSlider  from "../components/PosterSlider/PosterSlider.component";
 
