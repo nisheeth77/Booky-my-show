@@ -53,6 +53,7 @@ useEffect(() => {
 
     return (
         <>
+          <div className="bg-slate-100">
             <div className="container mx-auto px-4  mb-10  ">
 
                 <div className=" font-bold text-2xl py-2 px-2 text-gray-800  ">
@@ -69,7 +70,7 @@ useEffect(() => {
                 </div>
 
 
-                <div className="container mx-auto px-4 ">
+                <div className="container mx-auto px-4  ">
                     <PosterSlider images={popularMovies}  title="Premiere"
                     subtitle="Brand new release every friday" 
                     isDark
@@ -77,7 +78,7 @@ useEffect(() => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 mb-4 ">
+            <div className=" container mx-auto px-4 mb-4 ">
                     <PosterSlider images={topRatedMovies} title="Top Rated Movies"
                      isDark={false}
                      />
@@ -92,7 +93,7 @@ useEffect(() => {
                      isDark={false}
                      />
                 </div> */}
-
+            </div>
         </>
     );
 }
